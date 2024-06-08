@@ -1,0 +1,19 @@
+/* Btn NavBar Call Me */
+.btn-contact .btnhover{
+    width: 15px;
+    height: 330px;
+    background: #ffffffcc;
+    position: absolute;
+    rotate: -50deg;
+    left: -10px;
+    top: -117px;
+}
+.btn-contact:hover .btnhover{
+    animation: btnFade 0.75s ease;
+}
+@keyframes btnFade{
+    100%{
+        left: 126px;
+        top: -153px;
+    }
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        @font-face{
+            font-family: PinarRegular;
+            src: url(../Fonts/Pinar/ttf/Pinar-Regular.ttf);
+        }
+        @font-face{
+            font-family: PinarMedium;
+            src: url(../Fonts/Pinar/ttf/Pinar-Medium.ttf);
+        }
+        @font-face{
+            font-family: PinarSemiBold;
+            src: url(../Fonts/Pinar/ttf/Pinar-SemiBold.ttf);
+        }
+        @font-face{
+            font-family: PinarBold;
+            src: url(../Fonts/Pinar/ttf/Pinar-Bold.ttf);
+        }
+        :root{
+            --clr-Red: #A21441;
+            --clr-Blue: #1C39BB;
+            --clr-Yellow: #EBB40F;
+            --clr-Red2: #D7456E;
+            --clr-Orange: #D45814;
+            --clr-Green: #00A693;
+            --clr-Dark: #2a2a2a;
+            --clr-Text: #d3d4d6;
+            --clr-background: #252525;
+            --clr-BackItem: #64626228;
+            --clr-Border: #ffffff2c;
+            --clr-Border2:#ffffff81;
+            --clr-boxshadow: #91918d;
+            --clr-Text2: #91918d;
+        }
+
+        /*--- Footer ---*/
+        footer{
+            padding: 10px;
+            display: flex;
+            backdrop-filter: blur(20px);
+            height: 150px;
+        }
+        footer .container-footer{
+            width: 100%;
+            height: 100%;
+            border: 1px solid var(--clr-Border);
+            border-radius: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            direction: rtl;
+        }
+        footer .container-footer:hover{
+            border: 1px solid var(--clr-Border2);
+        }
+        footer .container-footer .box-name{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            padding: 10px 10px 10px 0;
+        }
+        footer .container-footer .box-name img{
+            width: 120px;
+        }
+        footer .container-footer .box-name a{
+            color: var(--clr-Text);
+            font-family: PinarBold;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        footer .container-footer .box-socials{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            padding: 15px 0 15px 40px;
+            gap: 8px;
+        }
+        footer .container-footer .box-socials a{
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            border: 1px solid var(--clr-Border);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+        }
+        footer .container-footer .box-socials a:hover{
+            border: 1px solid var(--clr-Border2);
+            scale: 1.15;
+        }
+    </style>
+</head>
+<body>
+    <!-- Footer -->
+    <footer>
+        <div class="container-footer">
+            <div class="box-name">
+                <img src="../icon/MJ-icon-light.png" alt="Logo">
+                
+                <a href="">شروع همکاری و مشاوره</a>
+            </div>
+
+            <div class="box-socials">
+
+                <a href="https://github.com/khodewmj">
+                    <img src="../icon/Footer/Github-icon-light.png" alt="GitHub" width="25px">
+                </a>
+                <a href="#">
+                    <img src="../icon/Footer/In.png" alt="Linkedin" width="25px">
+                </a>
+                <a href="https://www.instagram.com/khodewmj">
+                    <img src="../icon/Footer/Insta.png" alt="Instagram" width="25px">
+                </a>
+                <a href="https://t.me/khodewmj">
+                    <img src="../icon/Footer/Tel.png" alt="Telegram" width="25px">
+                </a>
+                <a href="https://wa.me/+989150867455">
+                    <img src="../icon/Footer/Wapp.png" alt="WhatsApp" width="25px">
+                </a>
+                <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=CllgCJNrdZCnnGvrrzRhSHRbBhMcWrfGCKhNkwNhrBDnrDzzwmQxxfNSWwZZBlTJzLRLGhDTKLB">
+                    <img src="../icon/Footer/Gmail.png" alt="Gmail" width="25px">
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
