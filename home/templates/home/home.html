@@ -1,0 +1,255 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KHODEWMJ</title>
+    <link rel="shortcut icon" href="{% static 'home/icon/fvicon.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'home/style/style.css' %}">
+    <link rel="stylesheet" href="{% static 'home/style/animation-Btn.css' %}">
+    <link rel="stylesheet" href="{% static 'home/style/Mobile-Responsive.css' %}">
+</head>
+<body>
+    <!-- NavBar -->
+    <nav>
+        <img src="{% static 'home/icon/MJ-icon-light.png' %}" alt="Logo" class="logo">
+
+        <div class="links">
+            <a href="#GetAboutsMe">بیوگرافی</a>|
+            <a href="{% url 'skills:skills' %}">مهارت ها</a>|
+            <a href="{% url 'resume:resume' %}">رزومه</a>|
+            <a href="{% url 'examples:example' %}">نمونه کارها</a>
+        </div>
+
+        <a href="https://wa.me/+989150867455" target="_blank" style="text-decoration: none;">
+
+            <button class="btn-contact">
+                تماس با من
+                <img src="{% static 'home/icon/Nav/CallBtn.png' %}" class="icon-contact" width="25">
+
+                <div class="btnhover"></div>
+            </button>
+        </a>
+    </nav>
+
+    <!-- Aside Left -->
+    <aside class="aside-1"></aside>
+    <!-- Aside Right -->
+    <aside class="aside-2"></aside>
+
+    <!-- Body WebSite -->
+    <section>
+
+        <!-- Profile Pix Right -->
+        <div class="profile">
+            <div class="card-profile">
+
+                <div id="name">
+                    <span class="name-Typet"></span>
+                </div>
+                
+                <div class="About">
+                    <span class="about-Typed">
+                       به سایت من خوش اومدی ، برنامه نویس فرانت اند هستم ، امیدوارم بتونم کمکت کنم
+                    </span>
+                </div>
+
+                <button>
+                    <img src="{% static 'home/icon/Section/Cardprofile/left-arrow.png' %}" alt="left arrow" width="30px" style="rotate: 180deg;">
+                        مشاهده رزومه من
+                </button>
+
+            </div>
+        </div>
+
+        <!-- details + box-content And box-contacts And Comments -->
+        <div class="details">
+
+            <!-- Article And website-design -->
+            <div class="box-content">
+                <div class="Article">
+                    <img src="{% static 'home/icon/Section/details/Article-icon.webp' %}" width="120px">
+                    
+                    <div class="text-article">
+                        <a href="" class="text-hide">مشاده تعرفه و خدمات</a>
+                        <a href="" class="text-light">مشاهده مقاله ها</a>
+                    </div>
+                </div>
+
+                <div class="website-design">
+                    <img src="{% static 'home/icon/Section/details/Design-icon.webp' %}" width="110px" alt="">
+                
+                    <div class="text-design">
+                        <a href="" class="text-hide">مشاهده تعرفه و خدمات</a>
+                        <a href="" class="text-light">طراحی و ساخت سایت</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Condition And Work-samples And Download-resume -->
+            <div class="box-contacts">
+                <div class="Condition">
+                    <img src="{% static 'home/icon/Section/details/Condition-illost.webp' %}" width="80px">
+
+                    <a href="" class="text-light">شرایط شروع همکاری</a>
+                    <p class="text-hide">برای مشاهده کلیک کنید</p>
+                </div>
+                <div class="Work-samples">
+                    <img src="{% static 'home/icon/Section/details/project-illost.webp' %}" width="80px">
+
+                    <a href="" class="text-light">نمونه کار های من</a>
+                    <p class="text-hide">برای مشاهده کلیک کنید</p>
+                </div>
+                <div class="Download-resume">
+                    <img src="{% static 'home/icon/Section/details/Download-illost.webp' %}" width="80px">
+
+                    <a href="" class="text-light">دانلود رزومه</a>
+                    <p class="text-hide">برای مشاهده کلیک کنید</p>
+                </div>
+            </div>
+
+            <!-- Comment -->
+            <div class="Comments">
+                <p>نظرات مشتریان</p>
+
+                <div class="Box-Comments">
+                    <div class="Card-Profile">
+                        <div class="Profile">
+
+                        </div>
+
+                        <div class="BoxText-Profile">
+                            <p class="name">محمد جعفری</p>
+                            <p class="devSkill">فرانت اند</p>
+                        </div>
+                    </div>
+
+                    <div class="Text-Comments">
+                        <p>از همکاری با شما بسیار لذت بردم کار درست حرفه ای  :)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- AboutsMe -->
+    <div class="aboutsMe" id="GetAboutsMe">
+        <fieldset>
+
+            <legend class="titleName" id="GetTitleName"> درباره من </legend>
+
+            <p class="aboutText">
+درود !
+من محمد جعفری هستم ، برنامه نویس سمت وب در زمینه فرانت اند .
+از 13 - 14 سالگی علاقه مند بودم به حوضه برنامه نویسی و کد این داستانا  :)
+و به مرور زمان از 16 سالگی به بعد وارد بحث برنامه نویسی شدم و با فضای کد نویسی آشنا شدم
+در حال حاضر تقریبا ۲ سالی هست که تو این زمینه فعالیت میکنم .
+            </p>
+
+            <img src="{% static 'home/icon/Section/details/Cool.webp' %}" width="85px" class="collIcon">
+
+        </fieldset>
+
+    </div>
+
+    <!-- Skills -->
+    <div class="skills">
+
+            <img src="{% static 'home/icon/Skills/JavaScript.png' %}" width="85">
+
+            <img src="{% static 'home/icon/Skills/React.png' %}" width="85">
+
+            <img src="{% static 'home/icon/Skills/Bootstrap.png' %}" width="85">
+
+            <img src="{% static 'home/icon/Skills/Css.png' %}" width="85">
+
+            <img src="{% static 'home/icon/Skills/HTML.png' %}" width="85">
+
+    </div>
+
+    <!-- SendMail -->
+    <div class="SendMail">
+        <fieldset>
+            <legend>ارسال نظر</legend>
+
+            <img src="{% static 'home/icon/sendMail/SendMail.webp' %}">
+
+           <form action="/home/" method="POST">
+               {% csrf_token %}
+               <div class="commentBox">
+                    <input type="text" class="textNote" placeholder="نظر خود را تایپ کنید..." name="comment">
+                    <input type="submit" class="submitSend" value="! ارسال">
+               </div>
+           </form>
+
+        </fieldset>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container-footer">
+            <div class="box-name">
+                <img src="{% static 'home/icon/MJ-icon-light.png' %}" alt="Logo">
+                
+                <a href="">شروع همکاری و مشاوره</a>
+            </div>
+
+            <div class="box-socials">
+
+                <a href="https://github.com/khodewmj">
+                    <img src="{% static 'home/icon/Footer/Github-icon-light.png' %}" alt="GitHub" width="25px">
+                </a>
+                <a href="#">
+                    <img src="{% static 'home/icon/Footer/In.png' %}" alt="Linkedin" width="25px">
+                </a>
+                <a href="https://www.instagram.com/khodewmj">
+                    <img src="{% static 'home/icon/Footer/Insta.png' %}" alt="Instagram" width="25px">
+                </a>
+                <a href="https://t.me/khodewmj">
+                    <img src="{% static 'home/icon/Footer/Tel.png' %}" alt="Telegram" width="25px">
+                </a>
+                <a href="https://wa.me/+989150867455">
+                    <img src="{% static 'home/icon/Footer/Wapp.png' %}" alt="WhatsApp" width="25px">
+                </a>
+                <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=CllgCJNrdZCnnGvrrzRhSHRbBhMcWrfGCKhNkwNhrBDnrDzzwmQxxfNSWwZZBlTJzLRLGhDTKLB">
+                    <img src="{% static 'home/icon/Footer/Gmail.png' %}" alt="Gmail" width="25px">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CopyRightText -->
+    <p class="CopyRightText">© Website created by MJ</p>
+
+
+    <!-- Script Links -->
+    <script src="{% static 'home/js/script.js' %}"></script>
+
+    <!-- 3D Card Profile -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js" integrity="sha512-wC/cunGGDjXSl9OHUH0RuqSyW4YNLlsPwhcLxwWW1CR4OeC2E1xpcdZz2DeQkEmums41laI+eGMw95IJ15SS3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        VanillaTilt.init(document.querySelector(".card-profile"), {
+		    max: 25,
+		    speed: 400
+            // glare: true,
+            // "max-glare": 0.10
+	    });
+    </script>
+
+    <!-- Typed Name Card -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('.name-Typet', {
+            strings: ['محمد^500 جعفری', 'فرانت اند^500 دولوپر'],
+            typeSpeed: 85,
+            backSpeed: 85,
+            backDelay: 1600,
+            cursorChar: '< />',
+            showCursor: true,
+            loop: true
+        });
+    </script>
+</body>
+</html>
