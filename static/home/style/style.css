@@ -1,0 +1,693 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face{
+    font-family: PinarRegular;
+    src: url(../Fonts/Pinar/ttf/Pinar-Regular.ttf);
+}
+@font-face{
+    font-family: PinarMedium;
+    src: url(../Fonts/Pinar/ttf/Pinar-Medium.ttf);
+}
+@font-face{
+    font-family: PinarSemiBold;
+    src: url(../Fonts/Pinar/ttf/Pinar-SemiBold.ttf);
+}
+@font-face{
+    font-family: PinarBold;
+    src: url(../Fonts/Pinar/ttf/Pinar-Bold.ttf);
+}
+:root{
+    --clr-Red: #A21441;
+    --clr-Blue: #1C39BB;
+    --clr-Yellow: #EBB40F;
+    --clr-Red2: #D7456E;
+    --clr-Orange: #D45814;
+    --clr-Green: #00A693;
+    --clr-Dark: #2a2a2a;
+    --clr-Text: #d3d4d6;
+    --clr-background: #252525;
+    --clr-BackItem: #64626228;
+    --clr-Border: #ffffff2c;
+    --clr-Border2:#ffffff81;
+    --clr-boxshadow: #91918d;
+    --clr-Text2: #91918d;
+}
+::selection{
+    background: #9400ff;
+    color: #fff;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/*--- Grid body ---*/
+body{
+    margin-top: 10px;
+    background: var(--clr-background);
+    display: grid;
+    grid-template-columns: 5% 90% 5%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+    'aside1 nav aside2'
+    'aside1 section aside2'
+    'aside1 aboutsMe aside2'
+    'aside1 skills aside2'
+    'aside1 SendMail aside2'
+    'aside1 footer aside2'
+    'aside1 CopyRightText aside2'
+    ;
+}
+.aside-1{
+    grid-area: aside1;
+    height: 100%;
+}
+.aside-2{
+    grid-area: aside2;
+    height: 100%;
+}
+nav{
+    grid-area: nav;
+    height: 70px;
+}
+section{
+    grid-area: section;
+    height: 550px;
+}
+.aboutsMe{
+    grid-area: aboutsMe;
+    height: 400px;
+}
+.skills{
+    grid-area: skills;
+    height: 300px;
+}
+.SendMail{
+    grid-area: SendMail;
+    height: 350px;
+}
+footer{
+    grid-area: footer;
+    height: 150px;
+}
+.CopyRightText{
+    grid-area: CopyRightText;
+    height: 50px;
+}
+
+/*--- Add Style ---*/
+
+/* NavBar */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    direction: rtl;
+}
+nav .logo{
+    width: 65px;
+    cursor: pointer;
+}
+nav .links{
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-decoration: none;
+    color: var(--clr-Text);
+}
+nav .links a{
+    color: var(--clr-Text);
+    text-decoration: none;
+    font-family: PinarBold;
+    position: relative;
+}
+nav .links a::after{
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+}
+nav .links a:hover:after{ 
+    width: 100%;
+    left: 0%;
+}
+nav .btn-contact{
+    width: 112px;
+    height: 45px;
+    outline: none;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    backdrop-filter: blur(6px);
+    border: none;
+    box-shadow: inset 0 0 7px var(--clr-boxshadow);
+    color: var(--clr-Text);
+    font-family: PinarSemiBold;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+nav .btn-contact:hover{
+    border: 1px solid var(--clr-Border2);
+}
+nav .btn-contact .icon-contact{
+    transform: rotate(-60deg);
+}
+
+/*--- Body WebSite ---*/
+
+/* Section */
+section{
+    display: flex;
+    justify-content: space-between;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    direction: rtl;
+}
+
+/* Profile Pix Right */
+section .profile{
+    height: 100%;
+    width: 350px;
+    padding: 4px 0 10px 10px;
+    transform-style: preserve-3d;
+    position: relative;
+    z-index: 10;
+}
+.profile .card-profile{
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    background-image: url(../Photos/MyPix.webp);
+    box-shadow: inset 0 0 21px -8px var(--clr-Border2);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(90%);
+    position: relative;
+    transform-style: preserve-3d;
+}
+.profile .card-profile #name{
+    font-size: 18px;
+    font-family: PinarBold;
+    color: var(--clr-Green);
+    direction: rtl;
+    position: absolute;
+    top: 260px;
+    right: 5px;
+    z-index: 22;
+    width: 180px;
+    height: 55px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    transform: translate3d(0,0,0);
+    filter: brightness(90%);
+    box-shadow: inset 0 0 10px -3px var(--clr-Border2);
+    background: transparent;
+    backdrop-filter: blur(30px);
+}
+.profile .card-profile #name .name-Typet{
+    font-size: 20px;
+    font-family: PinarBold;
+    transform-style: preserve-3d;
+    color: var(--clr-Text);
+    direction: rtl;
+}
+.profile .card-profile .About{
+    width: 294px;
+    height: 100px;
+    direction: rtl;
+    transform-style: preserve-3d;
+    position: absolute;
+    bottom: 103px;
+    right: 5px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate3d(0,0,0);
+    filter: brightness(90%);
+    box-shadow: inset 0 0 10px var(--clr-Border2);
+    background: transparent;
+    backdrop-filter: blur(30px);
+    padding: 10px;
+}
+.profile .card-profile .About .about-Typed{
+    font-family: PinarMedium;
+    transform-style: preserve-3d;
+    color: var(--clr-Text);
+    text-align: justify;
+}
+.profile .card-profile button{
+    width: 160px;
+    height: 50px;
+    border-radius: 16px;
+    outline: none;
+    border: none;
+    box-shadow: inset 0 0 10px var(--clr-Border2);
+    background: transparent;
+    margin: auto;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: PinarMedium;
+    backdrop-filter: blur(22px);
+    transform-style: preserve-3d;
+    transform: translate3d(0,0,0);
+    color: var(--clr-Text);
+    gap: 5px;
+    position: absolute;
+    bottom: 37px;
+    right: 80px;
+}
+
+
+/* details + box-content And box-contacts And Comments */
+
+/* details */
+section .details{
+    height: 100%;
+    width: 70%;
+    padding: 0 0 0 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ContentBox */
+.box-content{
+    width: 100%;
+    height: 130px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Article And website-design */
+
+/* Article */
+.box-content .Article{
+    width: 48%;
+    height: 120px;
+    border: 1px solid var(--clr-Border);
+    border-radius: 16px;
+    cursor: pointer;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    direction: rtl;
+    padding: 0 20px 0 0;
+}
+.box-content .Article:hover{
+    border: 1px solid var(--clr-Border2);
+}
+.box-content .Article .text-article{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+    height: 100px;
+}
+/* website-design */
+.box-content .website-design{
+    width: 48%;
+    height: 120px;
+    border: 1px solid var(--clr-Border);
+    border-radius: 16px;
+    cursor: pointer;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    direction: rtl;
+    padding: 0 20px 0 0;
+}
+.box-content .website-design:hover{
+    border: 1px solid var(--clr-Border2);
+}
+.box-content .website-design .text-design{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+    height: 100px;
+}
+/* Text Root ContentBox */
+.box-content .text-light{
+    color: var(--clr-Text);
+    font-size: 20px;
+    font-family: PinarSemiBold;
+    text-decoration: none;
+    letter-spacing: 1.25px;
+}
+.box-content .text-hide{
+    color: var(--clr-Text2);
+    font-size: 12px;
+    font-family: PinarRegular;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* ContactsBox */
+.box-contacts{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+}
+
+/* Conditionn And Work-samples And Download-resume */
+
+/* Condition */
+.box-contacts .Condition{
+    width: 27%;
+    height: 180px;
+    border: 1px solid var(--clr-Border);
+    border-radius: 16px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.box-contacts .Condition:hover{
+    border: 1px solid var(--clr-Border2);
+}
+/* Work-samples */
+.box-contacts .Work-samples{
+    width: 27%;
+    height: 180px;
+    border: 1px solid var(--clr-Border);
+    border-radius: 16px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.box-contacts .Work-samples:hover{
+    border: 1px solid var(--clr-Border2);
+}
+/* Download-resume */
+.box-contacts .Download-resume{
+    width: 27%;
+    height: 180px;
+    border: 1px solid var(--clr-Border);
+    border-radius: 16px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.box-contacts .Download-resume:hover{
+    border: 1px solid var(--clr-Border2);
+}
+/* Text Root ContactsBox */
+.box-contacts .text-light{
+    text-decoration: none;
+    font-family: PinarSemiBold;
+    color: var(--clr-Text);
+}
+.box-contacts .text-hide{
+    color: var(--clr-Text2);
+    font-size: 12px;
+    font-family: PinarRegular;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Comment */
+.Comments{
+    width: 100%;
+    height: 210px;
+    border: 1px solid var(--clr-Border);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    overflow: hidden;
+}
+.Comments:hover{
+    border: 1px solid var(--clr-Border2);
+}
+.Comments > p{
+    color: var(--clr-Text);
+    font-family: PinarSemiBold;
+    font-size: 15px;
+}
+.Comments .Box-Comments{
+    width: 95%;
+    height: 155px;
+    direction: rtl;
+    display: flex;
+    padding: 5px;
+}
+.Comments .Box-Comments .Card-Profile{
+    width: 150px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Comments .Box-Comments .Card-Profile .Profile{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 1px solid var(--clr-Border2);
+    background-image: url(../Photos/profile-pix.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.Comments .Box-Comments .Card-Profile .BoxText-Profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.Comments .Box-Comments .Card-Profile .BoxText-Profile .devSkill{
+    color: var(--clr-Text2);
+    font-size: 12px;
+    font-family: PinarRegular;
+    font-weight: bold;
+}
+.Comments .Box-Comments .Card-Profile .BoxText-Profile .name{
+    color: var(--clr-Text);
+    font-family: PinarRegular;
+}
+.Comments .Box-Comments .Text-Comments{
+    width: 85%;
+    height: 100%;
+    border-radius: 16px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    box-shadow: inset 0 0 10px var(--clr-boxshadow);
+    font-family: PinarRegular;
+    color: var(--clr-Text);
+    font-size: 14px;
+}
+
+
+/*--- AboutsMe ---*/
+.aboutsMe{
+    direction: rtl;
+    padding: 10px;
+}
+.aboutsMe fieldset{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    direction: rtl;
+    border-radius: 16px;
+    border: 4px dotted var(--clr-Border2);
+    position: relative;
+}
+.aboutsMe fieldset legend{
+    text-align: center;
+    padding: 10px;
+}
+.aboutsMe fieldset .titleName{
+    color: var(--clr-Text);
+    font-family: PinarSemiBold;
+    font-size: 33px;
+    text-shadow: 
+    0 0 10px var(--clr-Blue);
+}
+.aboutsMe fieldset .aboutText{
+    color: var(--clr-Text);
+    font-family: PinarMedium;
+    text-align: justify;
+    letter-spacing: .5px;
+}
+.aboutsMe fieldset .collIcon{
+    position: absolute;
+    top: -84px;
+    left: -37px;
+}
+
+
+/*--- Skills ---*/
+.skills{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: PinarMedium;
+}
+
+
+/*--- SendMail ---*/
+.SendMail{
+    font-family: PinarSemiBold;
+    padding: 10px;
+}
+.SendMail fieldset{
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    border: 1px solid var(--clr-Border);
+    direction: rtl;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.SendMail fieldset legend{
+    text-align: center;
+    color: var(--clr-Text);
+    padding: 10px;
+    font-size: 22px;
+}
+.SendMail fieldset img{
+    width: 220px;
+}
+.SendMail fieldset .commentBox{
+    direction: ltr;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+}
+.SendMail fieldset .commentBox .textNote{
+    width: 500px;
+    height: 250px;
+    padding: 10px;
+    border-radius: 6px;
+    color: var(--clr-Text);
+    font-family: PinarRegular;
+    background: var(--clr-BackItem);
+    border: none;
+    resize: none;
+    outline: none;
+    direction: rtl;
+}
+.SendMail fieldset .commentBox .submitSend{
+    margin: 10px;
+    width: 105px;
+    height: 40px;
+    border-radius: 6px;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    background: var(--clr-Red2);
+    color: var(--clr-Text);
+    font-family: PinarSemiBold;
+}
+.SendMail fieldset .commentBox .submitSend:hover{
+    border: 3px solid var(--clr-Red2);
+    background: transparent;
+}
+.SendMail fieldset .commentBox .submitSend:active{
+    scale: 1.15;
+}
+
+
+/*--- Footer ---*/
+footer{
+    padding: 10px;
+    display: flex;
+    backdrop-filter: blur(20px);
+}
+footer .container-footer{
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--clr-Border);
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    direction: rtl;
+}
+footer .container-footer:hover{
+    border: 1px solid var(--clr-Border2);
+}
+footer .container-footer .box-name{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 10px 10px 10px 0;
+}
+footer .container-footer .box-name img{
+    width: 120px;
+}
+footer .container-footer .box-name a{
+    color: var(--clr-Text);
+    font-family: PinarBold;
+    text-decoration: none;
+    font-size: 20px;
+}
+footer .container-footer .box-socials{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 15px 0 15px 40px;
+    gap: 8px;
+}
+footer .container-footer .box-socials a{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1px solid var(--clr-Border);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+footer .container-footer .box-socials a:hover{
+    border: 1px solid var(--clr-Border2);
+    scale: 1.15;
+}
+
+
+/*---- CopyRightText ---*/
+.CopyRightText{
+    margin: auto;
+    font-family: PinarRegular;
+    color: var(--clr-Text);
+}
+
+/*    Downe ^_^    */
