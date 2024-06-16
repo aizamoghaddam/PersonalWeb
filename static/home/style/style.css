@@ -45,7 +45,6 @@ html{
 
 /*--- Grid body ---*/
 body{
-    margin-top: 10px;
     background: var(--clr-background);
     display: grid;
     grid-template-columns: 5% 90% 5%;
@@ -58,6 +57,7 @@ body{
     'aside1 SendMail aside2'
     'aside1 footer aside2'
     'aside1 CopyRightText aside2'
+    'aside1 CopyRightBack aside2'
     ;
 }
 .aside-1{
@@ -86,7 +86,7 @@ section{
 }
 .SendMail{
     grid-area: SendMail;
-    height: 350px;
+    height: 400px;
 }
 footer{
     grid-area: footer;
@@ -94,6 +94,10 @@ footer{
 }
 .CopyRightText{
     grid-area: CopyRightText;
+    height: 30px;
+}
+.CopyRightBack{
+    grid-area: CopyRightBack;
     height: 50px;
 }
 
@@ -105,6 +109,7 @@ nav{
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+    margin-top: 10px;
     direction: rtl;
 }
 nav .logo{
@@ -474,7 +479,7 @@ section .details{
     height: 80px;
     border-radius: 50%;
     border: 1px solid var(--clr-Border2);
-    background-image: url(../Photos/profile-pix.webp);
+    background-image: url(../Photos/Profile-Comment-Alireza.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -569,7 +574,7 @@ section .details{
     border: 1px solid var(--clr-Border);
     direction: rtl;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 }
 .SendMail fieldset legend{
@@ -582,10 +587,11 @@ section .details{
     width: 220px;
 }
 .SendMail fieldset .commentBox{
-    direction: ltr;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    direction: ltr;
     margin-left: 30px;
 }
 .SendMail fieldset .commentBox .textNote{
@@ -612,6 +618,7 @@ section .details{
     background: var(--clr-Red2);
     color: var(--clr-Text);
     font-family: PinarSemiBold;
+    letter-spacing: .5px;
 }
 .SendMail fieldset .commentBox .submitSend:hover{
     border: 3px solid var(--clr-Red2);
@@ -682,12 +689,105 @@ footer .container-footer .box-socials a:hover{
     scale: 1.15;
 }
 
+/* Modal btn Condition */
+.Modal-Conection{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    position: fixed;
+    display: none;
+}
+.Modal-Conection .Card-Contact{
+    width: 60%;
+    height: 400px;
+    border-radius: 16px;
+    background: #252525;
+    box-shadow: inset -12px 12px 45px #151515,
+                inset 12px -12px 45px #353535;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    margin: 100px auto;
+}
+.Modal-Conection .Card-Contact .Exit-Modal{
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    cursor: pointer;
+    font-size: 35px;
+    font-weight: bold;
+    color: var(--clr-Text);
+    font-family: PinarBold;
+}
+.Modal-Conection .Card-Contact .Card-Email{
+    width: 90%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Card-Email .TXT-1{
+    margin: 10px;
+    font-family: PinarBold;
+    color: var(--clr-Text);
+}
+.Card-Email .TXT-Email{
+    margin: 10px;
+    font-size: PinarSemiBold;
+    color: var(--clr-Text);
+    letter-spacing: 1px;
+}
+.Modal-Conection .Card-Contact .Card-Telegram{
+    width: 90%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+.Card-Telegram .TXT-2{
+    margin: 10px;
+    font-family: PinarBold;
+    color: var(--clr-Text);
+}
+.Card-Telegram .TXT-Telegram{
+    margin: 10px;
+    font-size: PinarSemiBold;
+    color: var(--clr-Text);
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
 
 /*---- CopyRightText ---*/
 .CopyRightText{
     margin: auto;
     font-family: PinarRegular;
     color: var(--clr-Text);
+}
+.CopyRightText a{
+    text-decoration: none;
+    font-family: PinarRegular;
+    color: var(--clr-Blue);
+}
+
+/* CopyRightBack */
+.CopyRightBack{
+    margin: auto;
+    font-family: PinarRegular;
+    color: var(--clr-Text);
+}
+.CopyRightBack a{
+    text-decoration: none;
+    font-family: PinarRegular;
+    color: var(--clr-Blue);
 }
 
 /*    Downe ^_^    */

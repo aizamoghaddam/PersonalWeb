@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face{
+    font-family: PinarRegular;
+    src: url(../Fonts/Pinar/ttf/Pinar-Regular.ttf);
+}
+@font-face{
+    font-family: PinarMedium;
+    src: url(../Fonts/Pinar/ttf/Pinar-Medium.ttf);
+}
+@font-face{
+    font-family: PinarSemiBold;
+    src: url(../Fonts/Pinar/ttf/Pinar-SemiBold.ttf);
+}
+@font-face{
+    font-family: PinarBold;
+    src: url(../Fonts/Pinar/ttf/Pinar-Bold.ttf);
+}
+:root{
+    --clr-Red: #A21441;
+    --clr-Blue: #1C39BB;
+    --clr-Yellow: #EBB40F;
+    --clr-Red2: #D7456E;
+    --clr-Orange: #D45814;
+    --clr-Green: #00A693;
+    --clr-Dark: #2a2a2a;
+    --clr-Text: #d3d4d6;
+    --clr-background: #252525;
+    --clr-BackItem: #64626228;
+    --clr-Border: #ffffff2c;
+    --clr-Border2:#ffffff81;
+    --clr-boxshadow: #91918d;
+    --clr-Text2: #91918d;
+}
+::selection{
+    background: #9400ff;
+    color: #fff;
+}
+
+body{
+    background: var(--clr-background);
+    font-family: PinarMedium;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--clr-Text);
+}

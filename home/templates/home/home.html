@@ -51,11 +51,11 @@
                 
                 <div class="About">
                     <span class="about-Typed">
-                       به سایت من خوش اومدی ، برنامه نویس فرانت اند هستم ، امیدوارم بتونم کمکت کنم
+                       به سایت من خوش اومدی ، برنامه نویس فرانت اند هستم 
                     </span>
                 </div>
 
-                <button>
+                <button id="GetPageWork">
                     <img src="{% static 'home/icon/Section/Cardprofile/left-arrow.png' %}" alt="left arrow" width="30px" style="rotate: 180deg;">
                         مشاهده رزومه من
                 </button>
@@ -72,8 +72,8 @@
                     <img src="{% static 'home/icon/Section/details/Article-icon.webp' %}" width="120px">
                     
                     <div class="text-article">
-                        <a href="" class="text-hide">مشاده تعرفه و خدمات</a>
-                        <a href="" class="text-light">مشاهده مقاله ها</a>
+                        <a href="#" class="text-hide">مشاده تعرفه و خدمات</a>
+                        <a href="#" class="text-light">مشاهده مقاله ها</a>
                     </div>
                 </div>
 
@@ -81,30 +81,33 @@
                     <img src="{% static 'home/icon/Section/details/Design-icon.webp' %}" width="110px" alt="">
                 
                     <div class="text-design">
-                        <a href="" class="text-hide">مشاهده تعرفه و خدمات</a>
-                        <a href="" class="text-light">طراحی و ساخت سایت</a>
+                        <a href="#" class="text-hide">مشاهده تعرفه و خدمات</a>
+                        <a href="#" class="text-light">طراحی و ساخت سایت</a>
                     </div>
                 </div>
             </div>
 
             <!-- Condition And Work-samples And Download-resume -->
             <div class="box-contacts">
-                <div class="Condition">
+                
+                <div class="Condition" id="ClickMeBtn">
                     <img src="{% static 'home/icon/Section/details/Condition-illost.webp' %}" width="80px">
 
-                    <a href="" class="text-light">شرایط شروع همکاری</a>
+                    <p class="text-light">شرایط شروع همکاری</p>
                     <p class="text-hide">برای مشاهده کلیک کنید</p>
                 </div>
-                <div class="Work-samples">
+
+                <div class="Work-samples" id="WorkSample">
                     <img src="{% static 'home/icon/Section/details/project-illost.webp' %}" width="80px">
 
-                    <a href="" class="text-light">نمونه کار های من</a>
+                    <p class="text-light">نمونه کار های من</p>
                     <p class="text-hide">برای مشاهده کلیک کنید</p>
                 </div>
-                <div class="Download-resume">
+
+                <div class="Download-resume" id="DownloadsFile">
                     <img src="{% static 'home/icon/Section/details/Download-illost.webp' %}" width="80px">
 
-                    <a href="" class="text-light">دانلود رزومه</a>
+                    <p class="text-light">دانلود رزومه</p>
                     <p class="text-hide">برای مشاهده کلیک کنید</p>
                 </div>
             </div>
@@ -120,13 +123,13 @@
                         </div>
 
                         <div class="BoxText-Profile">
-                            <p class="name">محمد جعفری</p>
-                            <p class="devSkill">فرانت اند</p>
+                            <p class="name"> aiza Moghaddam </p>
+                            <p class="devSkill"> BackEnd </p>
                         </div>
                     </div>
 
                     <div class="Text-Comments">
-                        <p>از همکاری با شما بسیار لذت بردم کار درست حرفه ای  :)</p>
+                        <p> داداشم ممد فرانت کار حرفه ای و کار درست =) </p>
                     </div>
                 </div>
             </div>
@@ -157,15 +160,17 @@
     <!-- Skills -->
     <div class="skills">
 
-            <img src="{% static 'home/icon/Skills/JavaScript.png' %}" width="85">
+            <img src="../../../../../static/home/icon/Skills/git-light.png" width="85">
 
-            <img src="{% static 'home/icon/Skills/React.png' %}" width="85">
+            <img src="../../../../../static/home/icon/Skills/javascript-light.png" width="85">
 
-            <img src="{% static 'home/icon/Skills/Bootstrap.png' %}" width="85">
+            <img src="../../../../../static/home/icon/Skills/bootstrap-light.png" width="85">
 
-            <img src="{% static 'home/icon/Skills/Css.png' %}" width="85">
+            <img src="../../../../../static/home/icon/Skills/react-light.png" width="85">
 
-            <img src="{% static 'home/icon/Skills/HTML.png' %}" width="85">
+            <img src="../../../../../static/home/icon/Skills/css-light.png" width="85">
+
+            <img src="../../../../../static/home/icon/Skills/html-light.png" width="85">
 
     </div>
 
@@ -179,8 +184,8 @@
            <form action="/home/" method="POST">
                {% csrf_token %}
                <div class="commentBox">
-                    <input type="text" class="textNote" placeholder="نظر خود را تایپ کنید..." name="comment">
-                    <input type="submit" class="submitSend" value="! ارسال">
+                    <textarea type="text" class="textNote" placeholder="نظر خود را تایپ کنید..." name="comment"></textarea>
+                    <button type="submit" class="submitSend">ارسال</button>
                </div>
            </form>
 
@@ -210,18 +215,47 @@
                 <a href="https://t.me/khodewmj">
                     <img src="{% static 'home/icon/Footer/Tel.png' %}" alt="Telegram" width="25px">
                 </a>
-                <a href="https://wa.me/+989150867455">
-                    <img src="{% static 'home/icon/Footer/Wapp.png' %}" alt="WhatsApp" width="25px">
+                <a href="https://x.com/khodewmj?s=35">
+                    <img src="{% static 'home/icon/Footer/twitter.png' %}" alt="Twitter" width="25px">
                 </a>
-                <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=CllgCJNrdZCnnGvrrzRhSHRbBhMcWrfGCKhNkwNhrBDnrDzzwmQxxfNSWwZZBlTJzLRLGhDTKLB">
+                <a href="mailto:khodewmj@gmail.com">
                     <img src="{% static 'home/icon/Footer/Gmail.png' %}" alt="Gmail" width="25px">
                 </a>
             </div>
         </div>
     </footer>
 
+    <!-- Modal btn Condition -->
+    <div class="Modal-Conection" id="ModalConection">
+        <div class="Card-Contact">
+
+            <p class="Exit-Modal" id="Exit-Modal">×</p>
+
+            <div class="Card-Email">
+                <p class="TXT-1">
+                    برای هرگونه همکاری با ادرس ایمیل زیر در ارتباط باشید
+                </p>
+                <p class="TXT-Email">
+                    khodewmj@gmail.com
+                </p>
+            </div>
+
+            <div class="Card-Telegram">
+                <p class="TXT-2">
+                    و یا با این ایدی در تلگرام
+                </p>
+                <a href="https://t.me/khodewmj" class="TXT-Telegram">
+                    @khodewmj
+                </a>
+            </div>
+        </div>
+    </div>
+
     <!-- CopyRightText -->
-    <p class="CopyRightText">© Website created by MJ</p>
+    <p class="CopyRightText">© Website created by <a href="https://github.com/khodewmj">MJ</a></p>
+
+    <!-- CopyRightBack -->
+    <p class="CopyRightBack"> The backend of this site was by <a href="https://github.com/aizamoghaddam">AIZA</a></p>
 
 
     <!-- Script Links -->

@@ -340,6 +340,12 @@
     }
 
 
+    /*Text Root ContentBox */
+    .box-content .text-light{
+        font-size: 14px;
+    }
+
+
     /* SendMail */
     .SendMail fieldset .commentBox{
         width: 280px;
