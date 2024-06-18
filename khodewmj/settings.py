@@ -40,7 +40,10 @@ INSTALLED_APPS = [
     'home.apps.HomeConfig',
     'examples.apps.ExamplesConfig',
     'resume.apps.ResumeConfig',
-    'skills.apps.SkillsConfig'
+    'skills.apps.SkillsConfig',
+    'design.apps.DesignConfig',
+    'articles.apps.ArticlesConfig',
+
 ]
 
 MIDDLEWARE = [
